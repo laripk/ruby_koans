@@ -2,9 +2,11 @@ GEM
   remote: http://rubygems.org/
   specs:
     rake (0.8.7)
+    watchr (0.7)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   rake (= 0.8.7)
+  watchr (= 0.7)
