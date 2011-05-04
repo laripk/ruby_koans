@@ -14,7 +14,17 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  # WRITE THIS CODE
+  if a <= 0 || b <= 0 || c <= 0
+    raise TriangleError, "Sides must have positive length."
+  elsif a >= b+c || b >= a+c || c >= a+b
+    raise TriangleError, "No one side may be as long or longer than the other two."
+  elsif a == b && b == c
+    :equilateral
+  elsif a == b || b == c || a == c
+    :isosceles
+  else
+    :scalene
+  end
 end
 
 # Error class used in part 2.  No need to change this code.
